@@ -5,12 +5,12 @@ from openpyxl.styles import PatternFill
 from openpyxl.utils import get_column_letter
 
 
-def make_sheet_from_pic(pic_path, wb_name, size=[60, 30]):
+def make_sheet_from_pic(pic_path, wb_path, size=[60, 30]):
     """Converts an image file to an Excel Worksheet; Saves Workbook file
 
     Parameters:
     pic_path (str): the path of your image file
-    wb_name(str):   the name of the workbook; should end in .xlsx
+    wb_path(str):   the path of the new Workbook; should end in .xlsx
     size(list):     what size you want the image to be converted to
 
     Returns:
@@ -37,4 +37,4 @@ def make_sheet_from_pic(pic_path, wb_name, size=[60, 30]):
     for i in range(1, data.shape[1]+1):
         ws.column_dimensions[get_column_letter(i)].width = 2.7
     # Save Workbook
-    wb.save(wb_name)
+    wb.save(wb_path)
