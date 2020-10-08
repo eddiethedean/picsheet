@@ -5,7 +5,7 @@ from openpyxl.styles import PatternFill
 from openpyxl.utils import get_column_letter
 
 
-def make_sheet_from_pic(pic_path, wb_name, size):
+def make_sheet_from_pic(pic_path, wb_name, size=[60, 30]):
     # Make Workbook and Worksheet
     wb = Workbook()
     ws = wb.active
