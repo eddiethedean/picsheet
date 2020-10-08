@@ -6,6 +6,17 @@ from openpyxl.utils import get_column_letter
 
 
 def make_sheet_from_pic(pic_path, wb_name, size=[60, 30]):
+    """Converts an image file to an Excel Worksheet; Saves Workbook file
+
+    Parameters:
+    pic_path (str): the path of your image file
+    wb_name(str):   the name of the workbook; should end in .xlsx
+    size(list):     what size you want the image to be converted to
+
+    Returns:
+    None
+
+   """
     # Make Workbook and Worksheet
     wb = Workbook()
     ws = wb.active
